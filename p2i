@@ -50,8 +50,11 @@ then
     exit 1
 fi
 
-icon_orginal_name="icon"
-icon_name=$icon_orginal_name
+input_file="$2"
+base_name=$(basename "$input_file" .png)
+
+icon_orginal_name=$input_file
+icon_name=$base_name
 icon_extension="icns"
 
 # If dest path exists, add suffix number
